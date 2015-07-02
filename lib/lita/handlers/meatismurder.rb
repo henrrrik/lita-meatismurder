@@ -8,7 +8,7 @@ module Lita
         config.command_only = false
       end
 
-      route %r{.*(meat|chicken|veal|beef|steak|ham|lamb|turkey|venison|bresaola|pastrami|sausage|pata negra).*}i, :meatismurder
+      route %r{\b(meat|chicken|veal|beef|steak|ham|lamb|turkey|venison|bresaola|pastrami|sausage|pata negra|coq au vin)(s?)\b}i, :meatismurder
 
       def meatismurder(response)
         response.reply 'https://drive.google.com/uc?export=download&id=0B8kBOQqir-sKVEpqS2NuLTV0dXc'
